@@ -1,0 +1,27 @@
+[
+  {
+    "name": "   The Force  ",
+    "img": "https://lumiere-a.akamaihd.net/v1/images/01_194dfed7.jpeg?region=224%2C0%2C576%2C576",
+    "detail": "The Force is a mysterious energy field created by life that binds the galaxy together. Harnessing the power of the Force gives the Jedi, the Sith, and others sensitive to this spiritual energy extraordinary abilities, such as levitating objects, tricking minds, and seeing things before they happen. While the Force can grant users powerful abilities, it also directs their actions. And it has a will of its own, which both scholars and mystics have spent millennia seeking to understand."
+  },
+  {
+    "name": "   Jedi Mind Trick  ",
+    "img": "https://lumiere-a.akamaihd.net/v1/images/databank_jedimindtrick_01_169_a491266d.jpeg?region=425%2C0%2C878%2C878",
+    "detail": "The Force can have a powerful effect on the weak-minded, a phenomenon Jedi sometimes take advantage of in pursuing their missions. An experienced Jedi can use the Force to implant a suggestion in the minds of those they encounter, encouraging them to comply with the Jedi’s wishes."
+  },
+  {
+    "name": "   Force Lightning  ",
+    "img": "https://lumiere-a.akamaihd.net/v1/images/databank_forcelightning_01_169_b1eb5a6f.jpeg?region=460%2C0%2C878%2C878",
+    "detail": "Force lightning is a dark side ability used to torture, disfigure, and even kill one’s victims. Blue in color, Sith shoot Force lightning from their hands by calling on their hatred and aggressive feelings. However, while a deadly weapon, it is not unstoppable. Force lightning can be deflected and absorbed by a lightsaber, and select Jedi have proved able to neutralize the technique through the power of the light side."
+  },
+  {
+    "name": "   Force Choke  ",
+    "img": "https://lumiere-a.akamaihd.net/v1/images/databank_forcechoke_01_169_93e4b0cf.jpeg?region=168%2C0%2C877%2C878",
+    "detail": "The Force choke is another tool employed by Sith to intimidate and even kill their opponents. Sith usually visualize the ability with a claw-like or crushing hand gesture, and strangle a victim through the power of the dark side. The result is an often painful, slow death."
+  },
+  {
+    "name": "   Force Push  ",
+    "img": "https://lumiere-a.akamaihd.net/v1/images/databank_forcepush_01_169_645aafe8.jpeg?region=138%2C0%2C878%2C878",
+    "detail": "A key Force ability, the Force push is both an offensive and defensive technique. It is employed primarily by Jedi but also used by the Sith, and is accomplished with a forward hand gesture. Force pushes can range in intensity from simple movements to dangerous, powerful shoves that can disorient and harm opponents in battle."
+  }
+]
