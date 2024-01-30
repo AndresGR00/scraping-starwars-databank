@@ -1,17 +1,16 @@
-const CharacterModel = require("../models/data.model");
+const { CharacterModel } = require("../models/data.model");
 const characters = require("../../utils/jsonFiles/1-characters.json");
 
 const insertManyCharacters = async (req, res, next) => {
   try {
-    const characters = req.body;
-    const cleanedCharacter = characters.map((character) => {
+    const cleanedCharacters = characters.map((character) => {
       return {
-        name: character.name.replace('/"', "").trim(),
+        name: character.name.replace(/\"/g, "").trim(),
         img: character.img.trim(),
         detail: character.detail.trim(),
       };
     });
-    await CharacterModel.insertMany(cleanedCharacter);
+    await CharacterModel.insertMany(cleanedCharacters);
     return res.status(201).json("All characters uploaded to the database");
   } catch (error) {
     console.log(error);
