@@ -1,8 +1,8 @@
 const puppeteer = require("puppeteer");
 
-const scrapLocations = async () => {
+const scrapFunction = async (category) => {
   const URL = "https://www.starwars.com/databank";
-  const locationsArray = [];
+  const dataArray = [];
 
   const browser = await puppeteer.launch({
     headless: false,
@@ -11,12 +11,11 @@ const scrapLocations = async () => {
   });
   const page = await browser.newPage();
   await page.goto(URL);
-  await page.waitForSelector(".social-prompt"); //More From Star Wars
-  await page.click('li[data-slug="locations"] a');
-  await new Promise((resolve) => setTimeout(resolve, 3000)); //Espera tres segundos
+  await page.waitForSelector(".social-prompt");
+  await page.click(`li[data-slug="${category}"] a`);
+  await new Promise((resolve) => setTimeout(resolve, 3000));
 
   try {
-    //Hace click en el botón showMore mientras esté
     const showMore = ".show_more_container a";
     while (await page.$(showMore)) {
       await page.click(showMore);
@@ -31,16 +30,16 @@ const scrapLocations = async () => {
       let img = await li.$eval(".active li img", (el) => el.src);
       let detail = await li.$eval(".active li .desc", (el) => el.textContent);
 
-      const location = {
+      const data = {
         name,
         img,
         detail,
       };
-      locationsArray.push(location);
+      dataArray.push(data);
     }
     await browser.close();
-    return locationsArray;
+    return dataArray;
   }
 };
 
-module.exports = scrapLocations;
+module.exports = scrapFunction;
