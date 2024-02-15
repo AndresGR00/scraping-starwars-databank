@@ -1,30 +1,13 @@
 const { CharacterModel } = require("../models/data.model");
 const characters = require("../../utils/jsonFiles/1-characters.json");
+const { insertManyData, getAllData } = require("../../utils/controllerUtil");
 
 const insertManyCharacters = async (req, res, next) => {
-  try {
-    const cleanedCharacters = characters.map((character) => {
-      return {
-        name: character.name.replace(/\"/g, "").trim(),
-        img: character.img.trim(),
-        detail: character.detail.trim(),
-      };
-    });
-    await CharacterModel.insertMany(cleanedCharacters);
-    return res.status(201).json("All characters uploaded to the database");
-  } catch (error) {
-    console.log(error);
-    return res.status(400).json(error);
-  }
+  return await insertManyData(CharacterModel, characters, res);
 };
 
 const getAllCharacters = async (req, res, next) => {
-  try {
-    const allCharacters = await CharacterModel.find();
-    return res.status(200).json(allCharacters);
-  } catch (error) {
-    return res.status(400).json(error);
-  }
+  return await getAllData(CharacterModel, res);
 };
 
 module.exports = { insertManyCharacters, getAllCharacters };
